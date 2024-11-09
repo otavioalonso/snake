@@ -5,7 +5,7 @@ Implementation of the grid-based posterior exploration algorithm described in [M
 Essentially a smart grid sampler, it's effective behavior is:
 1. It moves towards the maximum likelihood point;
 2. From there it expands outwards, mapping the posterior distribution;
-3. It stops after hitting the specified delta chi2 threshold.
+3. It stops when all the points within reach have loglike < max(loglike) – threshold.
 
 <img src="https://otavioalves.com/images/snake.gif" width="200px" height="200px"/>
 
