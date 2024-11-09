@@ -30,8 +30,8 @@ class Snake(object):
         self.has_blobs = hasattr(self.best_fit_like, "__len__")
         if self.has_blobs:
             self.best_fit_like, blobs = self.best_fit_like
+            self.blobs = [blobs]
         self.likelihoods = {self.best_fit:self.best_fit_like}
-        self.blobs = [blobs]
         self.internal = set()
         self.surface = [(-self.best_fit_like,self.best_fit)]
         self.best_like_ever = self.best_fit_like
@@ -102,7 +102,8 @@ class Snake(object):
 
         for (p,L) in zip(P, likelihoods):
             self.likelihoods[p] = L
-            self.blobs.extend(blobs)
+            if self.has_blobs:
+                self.blobs.extend(blobs)
 
         #We cannot combine this with the loop
         #above since we then we will not have filled
