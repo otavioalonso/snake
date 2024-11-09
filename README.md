@@ -18,7 +18,7 @@ Forked from the [CosmoSIS framework](https://github.com/joezuntz/cosmosis). Cred
 ## Installation
 
 ```
-pip install git+https://github.com/otavioalves/snake-sampler
+pip install git+ssh://git@github.com/otavioalonso/snake-sampler.git
 ```
 
 ## Example
