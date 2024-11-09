@@ -25,7 +25,7 @@ pip install git+ssh://git@github.com/otavioalonso/snake-sampler.git
 
 ```python
 import numpy as np
-from snake_sampler import Snake
+from snake_sampler import snake
 
 def logpost(params):
     ...
@@ -33,7 +33,7 @@ def logpost(params):
     return logpost, extra_output
 
 
-sampler = Snake(
+sampler = snake.Snake(
     posterior=logpost,
     origin=(0, 0, ...), # starting point
     spacing=(0.001, 0.1, ...), # grid spacing
